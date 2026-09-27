@@ -1,0 +1,19 @@
+/* Engineering toolkit cards */
+.stack-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stack-group{display:flex;gap:22px;align-items:stretch;min-width:0;background:#fbfcfe;border:1px solid var(--line);border-radius:24px;padding:18px;transition:transform .2s ease,box-shadow .2s ease}
+.stack-group:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(16,24,40,.07)}
+.sk-art{container-type:inline-size;position:relative;flex:0 0 38%;max-width:240px;aspect-ratio:240/210;align-self:stretch;border-radius:18px;overflow:hidden}
+.sk-scene{position:absolute;inset:0;width:100%;height:100%}
+.sk-tile{position:absolute;display:grid;place-items:center;background:#fff;border-radius:22%;box-shadow:0 6px 16px rgba(29,41,57,.12)}
+.sk-tile>*{width:62%!important;height:62%!important}
+.sk-tile>span{display:grid;place-items:center}
+.sk-tile svg{width:100%;height:100%}
+.sk-blue{background:#2f7bf5}
+.sk-emoji{font-size:26cqw;line-height:1;width:auto!important;height:auto!important}
+.sk-body{min-width:0;padding-top:12px}
+.stack-group h3{margin:0 0 16px;font-size:clamp(17px,1.5vw,22px);letter-spacing:-.4px}
+.sk-chips{display:flex;flex-wrap:wrap;gap:8px}
+.sk-chips span{font-size:13px;background:#fff;border:1px solid #e3e7ec;padding:7px 13px;border-radius:999px;color:#4b5563}
+@media(max-width:1250px){.stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.stack-grid{grid-template-columns:1fr}}
+@media(max-width:460px){.stack-group{flex-direction:column}.sk-art{flex:none;width:100%;max-width:none}.sk-body{padding-top:0}}
